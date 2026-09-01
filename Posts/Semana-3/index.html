@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 3: Sensores e Aquisição de Imagens Digitais</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        article {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .meta-data {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .math-block {
+            background-color: #f1f2f6;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            text-align: center;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <article>
+        <h1>Post 3: Resumo de Estudo - Sensores e Formação da Imagem</h1>
+        <div class="meta-data">Publicado em: 01 de Setembro de 2026 | Por: Luis Henrique Ribeiro Fernandes</div>
+
+        <h2>Como as imagens são capturadas?</h2>
+        <p>
+            No estudo de Computação Visual, aprendemos que a grande maioria das imagens que nos interessam é gerada pela combinação de uma fonte de iluminação e como os objetos da cena refletem ou absorvem essa energia. Para transformar essa luz em dados, utilizamos sensores, que podem ser de três tipos principais:
+        </p>
+        <ul>
+            <li><strong>Sensor único:</strong> gera uma saída em forma de onda.</li>
+            <li><strong>Sensores de linha:</strong> muito comuns no funcionamento de scanners e satélites.</li>
+            <li><strong>Sensores de área:</strong> o modelo matricial utilizado nas câmeras digitais modernas.</li>
+        </ul>
+
+        <h2>O Modelo Matemático da Imagem</h2>
+        <p>
+            Uma imagem digital pode ser representada como uma função matemática bidimensional <em>f(x,y)</em>, que é calculada pela multiplicação de dois fatores:
+        </p>
+        <div class="math-block">
+            f(x,y) = i(x,y) × r(x,y)
+        </div>
+        <p>
+            O <strong>i(x,y)</strong> representa a iluminação, que varia de 0 a infinito (podendo ser a luz do sol, que é fortíssima, ou a luz da lua). Já o <strong>r(x,y)</strong> é a refletância do objeto, variando de 0 (absorção total, como um veludo preto) a 1 (refletância total, como a neve).
+        </p>
+
+        <h2>Transformando o Mundo Real em Digital</h2>
+        <p>
+            O mundo físico é contínuo, mas os computadores lidam com dados discretos. Para digitalizar uma imagem captada pelo sensor, ocorrem dois processos chamados de <em>discretização</em>:
+        </p>
+        <ul>
+            <li><strong>Amostragem (Sampling):</strong> é a digitalização das coordenadas espaciais, que define a resolução da imagem em si.</li>
+            <li><strong>Quantização (Quantization):</strong> é a digitalização das amplitudes, definindo quais serão os níveis de intensidade (ou os tons de cinza) daquela imagem.</li>
+        </ul>
+        <p>
+            Com isso, a imagem vira uma matriz 2D de M linhas e N colunas, onde cada quadradinho dessa matriz é o que chamamos de <strong>pixel</strong>. A quantidade de cores ou tons de cinza que cada pixel pode assumir (L) é geralmente uma potência de 2. Por exemplo, uma imagem de 8 bits (2 elevado a 8) possui 256 níveis de intensidade, onde 0 é a cor preta e o 255 é o branco absoluto.
+        </p>
+
+        <h2>Resolução Espacial</h2>
+        <p>
+            Por fim, a resolução espacial determina o menor detalhe que conseguimos enxergar na imagem digital. Ela costuma ser medida em DPI (Dots Per Inch / Pontos por polegada) para o meio impresso, ou PPI (Pixels Per Inch) quando falamos da densidade de pixels nas telas dos nossos dispositivos.
+        </p>
+    </article>
+
+</body>
+</html>
